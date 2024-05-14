@@ -1,0 +1,45 @@
+
+.mini-inner > .carousel-item {
+    left: 10%;
+  }
+  .carousel-div{
+    position: relative;
+    top: 65px;
+  }
+  .carousel-inner{
+    padding: 5px;
+  }
+  .carousel-inner {
+    padding: none!important;
+  }
+  .inSliding-multi-data {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-content: center;
+   justify-content: center;
+   align-items: flex-start;
+   width: 80%;
+  }
+  .inSliding-multi-data > p{
+  
+    word-spacing: 3px;
+    margin: 40px 10px;
+  }
+ 
+  @media screen and (max-width:900px) {
+    .carousel-item > img {
+      border-radius: 10px;
+      height: 50vh!important;
+    }
+  }
+  @media screen and (max-width:500px) {
+    .carousel {
+      height: 50vh;
+    }
+    .carousel-item > img {
+      border-radius: 10px;
+      height: 50vh!important;
+    }
+  }
+  
