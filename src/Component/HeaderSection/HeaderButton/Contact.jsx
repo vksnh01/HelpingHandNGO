@@ -121,7 +121,7 @@ function Contact() {
               <textarea
                 id=""
                 // onChange={InputHandler}
-                rows={10}
+                rows={5}
                 cols={20}
                 placeholder="Message"
                 name="message"
