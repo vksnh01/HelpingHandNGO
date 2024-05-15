@@ -6,18 +6,52 @@ import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 function Contact() {
-  const [formDetail, setFormDetail] = React.useState({
-    name: "",
-    contact: "",
-    city: "",
-    state: "",
-    subject: "",
-    message: "",
-  });
+  // const [formDetail, setFormDetail] = React.useState({
+  //   name: "",
+  //   contact: "",
+  //   city: "",
+  //   state: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  const InputHandler = (e) => {
-    setFormDetail({ ...formDetail, [e.target.name]: e.target.value });
-  };
+  // const InputHandler = () => {
+  //   setFormDetail({ ...formDetail, [e.target.name]: e.target.value });
+  // };
+
+  // // send to data on backend
+  // const ContactForm = async (e) => {
+  //   e.preventDefault();
+  //   const { name, contact, city, state, subject, message } = formDetail;
+  //   const res = await fetch("/contact", {
+  //     method: "POST",
+  //     header: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       name,
+  //       contact,
+  //       city,
+  //       state,
+  //       subject,
+  //       message,
+  //     }),
+  //   });
+  //   const data = await res.json();
+  //   if (!data) {
+  //     alert("Message not send");
+  //   } else {
+  //     alert("Message send");
+  //     setFormDetail({
+  //       name: "",
+  //       contact: "",
+  //       city: "",
+  //       state: "",
+  //       subject: "",
+  //       message: "",
+  //     });
+  //   }
+  // };
   return (
     <>
       <div className="contact-main-div">
@@ -48,33 +82,56 @@ function Contact() {
           </div>
           <hr />
           <div className="contact-form-section">
-            <form action="">
+            <form action="https://getform.io/f/pbygjjdb" method="POST">
               <input
                 type="text"
                 placeholder="Your Name"
-                onChange={InputHandler}
+                // onChange={InputHandler}
+                name="name"
+                // value={formDetail.name}
               />
               <input
                 type="number"
                 placeholder="Your Contact Number"
-                onChange={InputHandler}
+                // onChange={InputHandler}
+                name="contact"
+                // value={formDetail.contact}
               />
-              <input type="text" placeholder="City" onChange={InputHandler} />
-              <input type="text" placeholder="State" onChange={InputHandler} />
+              <input
+                type="text"
+                placeholder="City"
+                // onChange={InputHandler}
+                name="city"
+                // value={formDetail.city}
+              />
+              <input
+                type="text"
+                placeholder="State"
+                // onChange={InputHandler}
+                name="state"
+                // value={formDetail.state}
+              />
               <input
                 type="text"
                 placeholder="Subject"
-                onChange={InputHandler}
+                name="subject"
+                // onChange={InputHandler}
+                // value={formDetail.subject}
               />
               <textarea
-                name=""
                 id=""
-                onChange={InputHandler}
+                // onChange={InputHandler}
                 rows={10}
                 cols={20}
                 placeholder="Message"
+                name="message"
+                // value={formDetail.message}
               ></textarea>
-              <button className="contact-button">Send Message</button>
+              <button 
+              // onClick={ContactForm}
+               className="contact-button">
+                Send Message
+              </button>
             </form>
             <hr />
             <div className="location">
